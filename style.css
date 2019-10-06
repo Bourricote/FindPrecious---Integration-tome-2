@@ -1,0 +1,667 @@
+/* Fonts */
+
+@font-face {
+    font-family: aniron;
+    src: url(fonts/Aniron-7BaP.ttf);
+}
+
+@font-face {
+    font-family: party;
+    src: url(fonts/partybusiness.ttf);
+}
+
+@font-face {
+    font-family: tengwar;
+    src: url(fonts/tngan.ttf);
+}
+
+h1, h2, h3, h4, .navbar, #pills, select, ::placeholder, table {
+    font-family: aniron, sans-serif;
+}
+
+p, label, .btn, .carousel-caption h3 {
+    font-family: party, sans-serif;
+    font-size: 2rem;
+}
+
+.symbols, .link_symbols {
+    font-family: tengwar, sans-serif;
+    color: orangered;
+}
+
+/* general settings */
+
+.light-bg {
+    background-image: url(img/bg_light.png);
+    color: #252525;
+}
+
+.dark-bg {
+    background-image: url(img/bg_dark.png);
+    color: #EEEEEE;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hr {
+    border: solid 3px orangered;
+    width: 50%;
+    margin: 0 auto;
+    clip-path: polygon(2% 0%, 100% 0, 98% 100%, 0% 100%);
+}
+
+h1 {
+    padding: 3rem;
+}
+
+.row {
+    justify-content: center;
+}
+
+/* nav */
+
+.navbar {
+    padding: .8rem;
+    background-color: orangered;
+}
+
+.navbar-nav li {
+    padding: 0 2rem;
+}
+
+.navbar-nav li:not(:last-child) {
+    border-right: solid #FFBFBF 1px;
+}
+
+.nav-link {
+    font-size: 1.1em;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* carousel */
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption h3 {
+    font-size: 4rem;
+}
+
+.carousel-caption p {
+    font-size: 2.5rem;
+}
+
+/* fellows cards */
+
+#pills {
+    display: flex;
+    justify-content: space-around;
+}
+
+#pills li {
+    display: inline-block;
+}
+
+#pills a {
+    color: #252525;
+    border-bottom: 3px solid transparent;
+}
+
+#pills a:visited {
+    color: #252525;
+    text-decoration: none;
+}
+
+#pills a:active {
+    color: orangered;
+    text-decoration: none;
+}
+
+#pills a:hover {
+    color: orangered;
+    text-decoration: none;
+    border-bottom: 3px solid orangered;
+}
+
+.link_symbols {
+    visibility: hidden;
+}
+
+#pills a:hover .link_symbols {
+    visibility: visible;
+}
+
+h2 {
+    font-size: 1.2em;
+    padding: 2em;
+}
+
+span {
+    font-size: 0.8em;
+}
+
+.card {
+    margin: 1rem;
+    border: #252525 4px solid;
+}
+
+.card-img-top {
+    opacity: 0.8;
+}
+
+.card-body {
+    background-color: #252525;
+    color: #d5d5d5;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 10rem;
+    font-size: 3rem;
+    color: #EEEEEE;
+}
+
+.gimli {
+    text-decoration: line-through orangered;
+}
+
+.fellow_reward {
+    background-color: white;
+    opacity: 0.7;
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 1rem;
+    text-align: center;
+    align-self: center;
+    font-size: 2rem;
+}
+
+.fellow_dead {
+    opacity: 0.7;
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 1rem;
+    text-align: center;
+    align-self: center;
+    font-size: 3.5rem;
+    color: orangered;
+    background-color: black;
+}
+
+.card:hover .fellow_reward, .card:hover .fellow_dead {
+    display: none;
+}
+
+.card:hover .card-img-top {
+    opacity: 1;
+}
+
+.card:hover .card-title {
+    font-size: 1.5rem;
+}
+
+.reward_amount {
+    color: orangered;
+}
+
+/* reward section */
+
+.reward_img {
+    display: flex;
+}
+
+#reward img {
+    max-width: 250px;
+    position: relative;
+    bottom: 20px;
+    margin: auto;
+}
+
+#reward p {
+    width: 70%;
+    text-align: justify;
+}
+
+#reward_elements {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reward_btn {
+    display: flex;
+}
+
+#reward .button {
+    margin: 20px auto;
+    text-align: center;
+    background-color: #EEEEEE;
+    clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+    line-height: 40px;
+    padding: 25px;
+    width: 20%;
+    display: block;
+    font-family: aniron, sans-serif;
+    color: orangered;
+    font-size: 1.5rem;
+}
+
+#reward .button:hover {
+    text-decoration: none;
+    background-color: #FFBFBF;
+}
+
+/* hunters section */
+
+#huntersList {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+.hunter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.hunter h2 {
+    font-family: party, sans-serif;
+    font-size: 4rem;
+    color: orangered;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.hunter_pic img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.hunter_spec {
+    margin: 10px;
+    width: 80%;
+}
+
+.profile_btn {
+    color: black;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.profile_btn:hover {
+    color: orangered;
+}
+
+.hate_btn {
+    background-color: #2f282b;
+    color: orangered;
+    font-weight: bold;
+    clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+    line-height: 20px;
+    padding: 15px;
+    width: 40%;
+    font-family: party, sans-serif;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.hate_btn:hover {
+    background-color: #5e5056;
+    color: orangered;
+    text-decoration: none;
+}
+
+/* ring */
+
+#ring {
+    padding-bottom: 50px;
+}
+
+.infos {
+    border-bottom: 4px solid orangered;
+    border-radius: 10px 10px 0 0;
+    width: 70%;
+    margin: 50px auto;
+}
+
+.infos h2 {
+    padding: 20px;
+    background-color: orangered;
+    border: 2px solid orangered;
+    border-radius: 7px 7px 0 0;
+    font-size: 1.5rem;
+}
+
+.infos p {
+    margin: 20px;
+}
+
+table {
+    width: 80% !important;
+    margin: 20px auto;
+}
+
+th, td {
+    height: 60px;
+    padding: 20px !important;
+}
+
+table th {
+    font-size: 1.5rem;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #e7e5dc;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #F4F2E9;
+}
+
+#gollum {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#gollum_word {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#gollum_name {
+    color: grey;
+    position: relative;
+    top: 80px;
+    right: 50px;
+}
+
+.infos img {
+    max-width: 200px;
+    margin: 20px;
+}
+
+/* army */
+
+#army_elements {
+    display: flex;
+    justify-content: space-around;
+}
+
+#join img {
+    max-height: 250px;
+}
+
+#join_text {
+    width: 70%;
+    text-align: justify;
+}
+
+.info_sauron {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#more_info {
+    margin: 20px;
+    text-align: center;
+    color: orangered;
+    font-family: aniron, sans-serif;
+}
+
+.btn_wrap {
+    filter: drop-shadow(10px 5px 5px grey);
+}
+
+#join .button {
+    margin: 20px;
+    margin-bottom: 150px;
+    text-align: center;
+    background-color: #2f282b;
+    clip-path: polygon(5% 0%, 100% 0, 95% 100%, 0% 100%);
+    line-height: 40px;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    font-family: aniron, sans-serif;
+    color: orangered;
+    font-size: 1.5rem;
+}
+
+.button_wrap {
+    filter: drop-shadow(10px 5px 5px grey);
+}
+
+#join .button:hover {
+    text-decoration: none;
+    background-color: #5e5056;
+}
+
+/* contact form */
+
+#contact_form {
+    padding: 2rem;
+}
+
+#contact_form input, #contact_form textarea {
+    padding: 20px;
+    margin: 50px 10px;
+}
+
+#contact_form select {
+    margin: 50px 10px;
+    height: 50px;
+}
+
+#contact_form textarea {
+    height: 300px;
+}
+
+#submit {
+    margin: 20px 40%;
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+    background-color: #EEEEEE;
+    clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+    line-height: 40px;
+    padding: 15px;
+    width: 200px;
+    display: block;
+    font-family: aniron, sans-serif;
+    color: orangered;
+    font-size: 1.5rem;
+}
+
+#submit:hover {
+    text-decoration: none;
+    background-color: #FFBFBF;
+}
+
+#contact_map {
+    margin: 2rem auto;
+}
+
+#contact_map img {
+    width: 90%;
+    margin: auto;
+}
+
+/* Footer */
+
+footer {
+    background-color: orangered;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+footer ul {
+    color: white;
+    padding: 20px;
+}
+
+footer a {
+    padding: 10px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #FFBFBF;
+}
+
+#side_list {
+    font-weight: bold;
+}
+
+#side_list img {
+    margin: 1rem;
+}
+
+/* Media queries */
+
+@media (max-width: 961px) {
+
+    /* general settings */
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    h2 {
+        font-size: 0.8em;
+    }
+
+    /* carousel */
+    .carousel-caption{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .carousel-caption h3 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+
+    /* nav */
+    .nav-link {
+        font-size: 0.7em;
+    }
+
+    /* reward */
+    #reward .button {
+        width: 70%;
+    }
+
+    /* hunters */
+    .hunter h2 {
+        font-size: 2rem;
+    }
+
+    .hunter_pic img {
+        width: 130px;
+        height: 130px;
+    }
+
+    /* ring */
+    table th, table td {
+        font-size: 0.9rem;
+    }
+
+    #gollum {
+        display: block;
+    }
+
+    #gollum_word {
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    #gollum_name {
+        color: grey;
+        position: relative;
+        top: 0;
+        right: 0;
+        font-size: 1.2rem;
+    }
+
+    .infos img {
+        max-width: 100px;
+        margin: 5px;
+    }
+
+    /* join */
+    #join_text {
+        width: 80%;
+        text-align: justify;
+        font-size: 1.3rem;
+    }
+
+    .join_img {
+        width: 90%;
+        margin: 10px;
+        display: flex;
+    }
+
+    #join img {
+        max-height: 150px;
+        margin: auto;
+    }
+
+    #more_info {
+        font-size: 1rem;
+    }
+
+    #join .button {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    /* contact */
+    #contact_form input, #contact_form textarea {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #contact_form select {
+        margin: 10px;
+        height: 50px;
+    }
+
+    #contact_form textarea {
+        height: 100px;
+    }
+
+    /* footer */
+    footer a {
+        padding: 10px;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    footer img {
+        max-width: 150px;
+    }
+}
